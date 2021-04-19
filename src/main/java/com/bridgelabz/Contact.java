@@ -22,25 +22,18 @@ public class Contact {
         this.email = email;
 
     }
-    public void person(){
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter your First Name");
-        String firstname = input.next();
-        System.out.println("Enter your Last Name");
-        String Lastname = input.next();
-
-
-    }
-
-    public static void main(String[] args) {
-        System.out.println("WELCOME to Address Book Program");
-        Contact entry = new Contact("Vinit", "Joshi", "parit galli", "kapshi", "maharashtra", 416218, "5465651463", "joshivinit@gmail.com");
-        System.out.println("First name: " + entry.fristname);
-        System.out.println("Last name: " + entry.lastname;
-        System.out.println("City: " + entry.city);
-        System.out.println("State: " + entry.state);
-        System.out.println("Pin code: " + entry.zip);
-        System.out.println("E-Mail: " + entry.email);
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "fristname='" + fristname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip=" + zip +
+                ", phone=" + phone +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
