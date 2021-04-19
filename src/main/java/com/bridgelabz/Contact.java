@@ -1,6 +1,5 @@
 package com.bridgelabz;
 
-import java.util.Scanner;
 
 public class Contact {
     public String fristname;
@@ -9,10 +8,10 @@ public class Contact {
     public String city;
     public String state;
     public int zip;
-    public long phone;
+    public String phone;
     public String email;
 
-    public Contact(String fristname,String lastname,String address,String city,String state,int zip,long phone,String email){
+    public Contact(String fristname, String lastname, String address, String city, String state, int zip, String phone, String email){
         this.fristname = fristname;
         this.lastname = lastname;
         this.address = address;
