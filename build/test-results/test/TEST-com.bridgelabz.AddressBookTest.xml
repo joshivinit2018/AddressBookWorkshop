@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-19T06:08:54" hostname="DESKTOP-011U31P" time="0.033">
+<testsuite name="com.bridgelabz.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-20T00:39:08" hostname="DESKTOP-011U31P" time="0.03">
   <properties/>
-  <testcase name="given_contact_when_addedTo_addressbook_shouldReturn_true()" classname="com.bridgelabz.AddressBookTest" time="0.033"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="given_contact_when_update_shouldReturn_true()" classname="com.bridgelabz.AddressBookTest" time="0.03"/>
+  <system-out><![CDATA[Contact{fristname='Vinit', lastname='Joshi', address='kagal', city='city', state='Maharashtra', zip=416218, phone=null, email='joshivini@gmail.com'}
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

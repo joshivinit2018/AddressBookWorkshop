@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
+import java.awt.*;
+import java.util.List;
+
 public class AddressBookTest {
 
     private static AddressBookMain addressBookMain;
@@ -18,8 +21,19 @@ public class AddressBookTest {
     @Test
     public void given_contact_when_addedTo_addressbook_shouldReturn_true() {
         AddressBookMain addressBookMain = new AddressBookMain();
-        Contact contact = new Contact("Vinit","Joshi","address","city","Maharashtra",416218,"7798969414","joshivini@gmail.com");
-        boolean isadd= addressBookMain.addContact(contact);
-        Assert.assertTrue(isadd);
+        Contact contact = new Contact("Vinit","Joshi","kagal","city","Maharashtra","416218","7798969414","joshivini@gmail.com");
+       // boolean isadd= addressBookMain.addContact(contact);
+       // Assert.assertTrue(isadd);
+        List<Contact> contactList =addressBookMain.addContact(contact);
+        Assert.assertEquals(1,contactList.size());
+    }
+
+    @Test
+    void given_contact_when_update_shouldReturn_true() {
+        AddressBookMain addressBookMain = new AddressBookMain();
+        Contact contact = new Contact("Vinit","Joshi","kagal","city","Maharashtra","416218","7798969414","joshivini@gmail.com");
+        List<Contact> contactList =addressBookMain.addContact(contact);
+        Contact updateContact = addressBookMain.updateContact(contactList,"Vinit","address","indiralane");
+        Assert.assertEquals("indiralane",updateContact.address);
     }
 }
