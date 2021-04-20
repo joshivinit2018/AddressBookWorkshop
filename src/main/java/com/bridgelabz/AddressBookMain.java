@@ -14,7 +14,6 @@ public class AddressBookMain {
     }
 
     public List<Contact> addContact(Contact contact) {
-        System.out.println(contact);
         contactList = new ArrayList<>();
         try {
             contactList.add(contact);
@@ -24,10 +23,11 @@ public class AddressBookMain {
         }
         return contactList;
     }
+
     public Contact updateContact(List<Contact> contactList, String name, String fieldName, String update) {
         try {
-            for(Contact contact : contactList){
-                if(contact.fristname.equals(name)) {
+            for (Contact contact : contactList) {
+                if (contact.fristname.equals(name)) {
                     switch (fieldName) {
                         case "firstName":
                             contact.fristname = update;
@@ -61,5 +61,21 @@ public class AddressBookMain {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public List<Contact> deleteContact(List<Contact> contactList, String name) {
+        try {
+            for (Contact contact : contactList) {
+                if (contact.fristname.equals(name)) {
+                    contactList.remove(contactList.indexOf(contact));
+                    System.out.println("Contact deleted with name : " +name);
+                    break;
+                }
+            }
+            return contactList;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return contactList;
     }
 }
